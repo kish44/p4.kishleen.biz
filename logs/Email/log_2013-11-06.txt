@@ -1,0 +1,31 @@
+2013-11-06 13:42:23 - INFO --> -------------------------- 
+2013-11-06 13:42:24 - INFO --> Controller/Method: users/p_signup 
+2013-11-06 13:42:24 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-11-06 13:42:24 - INFO --> To: k (theanim111@gmail.com),  
+2013-11-06 13:42:24 - INFO --> CC:  
+2013-11-06 13:42:24 - INFO --> BCC:  
+2013-11-06 13:42:24 - INFO --> Subject: Welcome to KishBlog 
+2013-11-06 13:42:24 - INFO --> Body: <br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Undefined variable: content in C:\wam 
+2013-11-06 13:42:25 - INFO --> FAILED TO SEND EMAIL 
+2013-11-06 14:27:40 - INFO --> -------------------------- 
+2013-11-06 14:27:40 - INFO --> Controller/Method: users/p_signup 
+2013-11-06 14:27:41 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-11-06 14:27:41 - INFO --> To: the (theanim111@gmail.com),  
+2013-11-06 14:27:41 - INFO --> CC:  
+2013-11-06 14:27:41 - INFO --> BCC:  
+2013-11-06 14:27:41 - INFO --> Subject: Welcome to YapperBox 
+2013-11-06 14:27:41 - INFO --> Body: <h1>Thanks for signing up</h1>
+<p>Your registration is confirmed</p> 
+2013-11-06 14:27:42 - INFO --> FAILED TO SEND EMAIL 
+2013-11-06 14:33:38 - INFO --> -------------------------- 
+2013-11-06 14:33:38 - INFO --> Controller/Method: users/p_signup 
+2013-11-06 14:33:38 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-11-06 14:33:38 - INFO --> To: jo (kishleensaini@yaho.com),  
+2013-11-06 14:33:38 - INFO --> CC:  
+2013-11-06 14:33:38 - INFO --> BCC:  
+2013-11-06 14:33:38 - INFO --> Subject: Welcome to YapperBox 
+2013-11-06 14:33:38 - INFO --> Body: <h1>Thanks for signing up</h1>
+<p>Your registration is confirmed</p> 
+2013-11-06 14:33:39 - INFO --> FAILED TO SEND EMAIL 

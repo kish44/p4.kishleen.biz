@@ -1,0 +1,58 @@
+2013-12-17 17:34:43 - INFO --> -------------------------- 
+2013-12-17 17:34:43 - INFO --> Controller/Method: users/p_login 
+2013-12-17 17:34:43 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-12-17 17:34:43 - INFO --> To: Kish Blog (kishleensaini@gmail.com),  
+2013-12-17 17:34:43 - INFO --> CC:  
+2013-12-17 17:34:43 - INFO --> BCC:  
+2013-12-17 17:34:43 - INFO --> Subject: Kish Blog SQL Error 
+2013-12-17 17:34:43 - INFO --> Body: <h2>SQL Error</h2>Access denied for user 'kishleen_p2'@'localhost' (using password: YES)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => snkat6ofjfoe08g5bn3rakmhb0
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => kk
+    [passw 
+2013-12-17 17:34:45 - INFO --> FAILED TO SEND EMAIL 
+2013-12-17 17:35:11 - INFO --> -------------------------- 
+2013-12-17 17:35:11 - INFO --> Controller/Method: users/p_login 
+2013-12-17 17:35:11 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-12-17 17:35:11 - INFO --> To: Kish Blog (kishleensaini@gmail.com),  
+2013-12-17 17:35:11 - INFO --> CC:  
+2013-12-17 17:35:11 - INFO --> BCC:  
+2013-12-17 17:35:11 - INFO --> Subject: Kish Blog SQL Error 
+2013-12-17 17:35:11 - INFO --> Body: <h2>SQL Error</h2>Access denied for user 'kishleen_p2'@'localhost' (using password: YES)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => snkat6ofjfoe08g5bn3rakmhb0
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => kk
+    [passw 
+2013-12-17 17:35:12 - INFO --> FAILED TO SEND EMAIL 
+2013-12-17 17:37:23 - INFO --> -------------------------- 
+2013-12-17 17:37:23 - INFO --> Controller/Method: users/p_login 
+2013-12-17 17:37:23 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-12-17 17:37:23 - INFO --> To: Kish Blog (kishleensaini@gmail.com),  
+2013-12-17 17:37:23 - INFO --> CC:  
+2013-12-17 17:37:23 - INFO --> BCC:  
+2013-12-17 17:37:23 - INFO --> Subject: Kish Blog SQL Error 
+2013-12-17 17:37:23 - INFO --> Body: <h2>SQL Error</h2>Access denied for user 'kishleen_p2'@'localhost' (using password: YES)<h2>Query History</h2><h2>Routed Controller/Method:</h2> users/p_login<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => ucroqklt5aab78m7r2utbngpv5
+)
+</pre><h2>POST</h2><pre>Array
+(
+    [email] => kk
+    [passw 
+2013-12-17 17:37:24 - INFO --> FAILED TO SEND EMAIL 
+2013-12-17 17:42:48 - INFO --> -------------------------- 
+2013-12-17 17:42:48 - INFO --> Controller/Method: users/p_signup 
+2013-12-17 17:42:48 - INFO --> From: Kish Blog (kishleensaini@yahoo.com) 
+2013-12-17 17:42:48 - INFO --> To: kk (theanim191@gmail.com),  
+2013-12-17 17:42:48 - INFO --> CC:  
+2013-12-17 17:42:48 - INFO --> BCC:  
+2013-12-17 17:42:48 - INFO --> Subject: Welcome to Kish Blog 
+2013-12-17 17:42:48 - INFO --> Body: <h1>Thanks for signing up</h1>
+<p>Your registration is confirmed</p> 
+2013-12-17 17:42:49 - INFO --> FAILED TO SEND EMAIL 
