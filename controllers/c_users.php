@@ -110,7 +110,7 @@ class users_controller extends base_controller {
                         // insert this user into the database
                         $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
-                        // all users follow their own posts by default
+                        // all users follow their own markers by default
                         $data = Array(
                                 "created" => Time::now(),
                                 "user_id" => $user_id,
@@ -292,7 +292,7 @@ public function p_login() {
                                 
                                 else {
                                 // all checks passed, now cleanup the DB from this user
-                                // deletes user, their posts, and all connections in users_users
+                                // deletes user, their markers, and all connections in users_users
                                 $w = 'WHERE user_id = '.$this->user->user_id;
                                 DB::instance(DB_NAME)->delete('users', $w);
                                 }

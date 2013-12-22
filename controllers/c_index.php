@@ -22,10 +22,18 @@ class index_controller extends base_controller {
 			$this->template->title = "Home Page";
 	
 		# CSS/JS includes
+			
+		# Create an array of 1 or many client files to be included in the body
+    	$client_files_body = Array(
+		'http://maps.google.com/maps/api/js?sensor=false',
+        '/js/googleMaps.js'
+        );
+
+		# Use load_client_files to generate the links from the above array
+		$this->template->client_files_body = Utils::load_client_files($client_files_body);  
+
+  
 			/*
-			$client_files_head = Array("");
-	    	$this->template->client_files_head = Utils::load_client_files($client_files);
-	    	
 	    	$client_files_body = Array("");
 	    	$this->template->client_files_body = Utils::load_client_files($client_files_body);   
 	    	*/
@@ -36,4 +44,12 @@ class index_controller extends base_controller {
 	} # End of method
 	
 	
+	
+	
+	
+	
 } # End of class
+
+
+
+

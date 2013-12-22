@@ -1,4 +1,4 @@
-<?php foreach($posts as $post): ?>
+<?php foreach($markers as $post): ?>
 
 <article>
 
@@ -11,7 +11,7 @@
     </time>
     
     <?php if($user->user_id == $post['post_user_id']): ?> 
-    <a href=/posts/delete/<?=$post['created']?>/<?=$post['post_user_id']?>>Delete</a> 
+    <a href=/markers/delete/<?=$post['created']?>/<?=$post['post_user_id']?>>Delete</a> 
     <?php endif; ?>
     
     

@@ -1,23 +1,176 @@
-@charset "utf-8";
-/* CSS Document */
-
-body {
-	background-color: #CCC;
-	border: medium solid #000;
-	margin: 10%;
-	padding: 10%;
-}
-nav {
-	list-style-type: none;
-}
-h4 {
-	font-weight: normal;
-	color: #000;
+body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label{
+	/* The reset rules */
+	margin:0px;
+	padding:0px;
 }
 
-h1 {
-	color: #900;
+body{
+	color:#333;
+	font-size:13px;
+	background: #CCC;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 100%;
 }
-.error {
-	color: #F00;
+
+h1{
+	font-size:28px;
+	font-weight:bold;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;
+	letter-spacing:1px;
 }
+
+h2{
+	font-family:"Arial Narrow",Arial,Helvetica,sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	letter-spacing:1px;
+	padding-left:2px;
+	text-transform:uppercase;
+	white-space:nowrap;
+	margin-top:4px;
+	color:#888888;
+}
+
+#main p{
+	padding-bottom:8px;
+}
+
+.clear{
+	clear:both;
+}
+
+#main{
+	width:800px;
+	/* Centering it in the middle of the page */
+	margin:60px auto;
+}
+
+.container{
+	margin-top:20px;
+	
+	background:#FFFFFF;
+	border:1px solid #E0E0E0;
+	padding:15px;
+	
+	/* Rounded corners */
+	-moz-border-radius:20px;
+	-khtml-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius:20px;
+}
+
+.login{
+	margin-top:20px;
+	
+	background:#FFFFFF;
+	border:1px solid #E0E0E0;
+	padding:15px;
+	
+	/* Rounded corners */
+	-moz-border-radius:20px;
+	-khtml-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius:20px;
+}
+
+
+.err{
+	color:red;
+}
+
+.smalltext{
+	font-size:2x;;
+}
+
+.success{
+	color:#00CC00;
+}
+
+a, a:visited {
+	color:#00BBFF;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+.bottom{
+	text-align:center;
+	padding:10px;
+	color:#666;
+}
+
+#address {
+  width:300px;
+  height:150px;
+  float: left;
+  margin: 10px;
+}
+
+#map_canvas {
+  width:256px;
+  height:150px;
+  margin: 10px;
+}
+
+#validate {
+  clear: both;
+}
+
+#results {
+  margin-top: 10px;
+}
+
+a {
+	color:#F00;
+	text-decoration:underline;
+}
+a:hover {color:#ccc; text-decoration:none}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#boxes #dialog {
+  width:375px; 
+  height:403px;
+  padding:10px;
+  background-color:#ffffff;
+}
+
+<!--form validations-->
+#field { margin-left: .5em; float: left; }
+  	#field, label { float: left; font-family: Arial, Helvetica, sans-serif; font-size: small; }
+	br { clear: both; }
+	input { border: 1px solid black; margin-bottom: .5em;  }
+	input.error { border: 1px solid red; }
+	label.error {
+		background: url('http://dev.jquery.com/view/trunk/plugins/validate/demo/images/unchecked.gif') no-repeat;
+		padding-left: 16px;
+		margin-left: .3em;
+	}
+	label.valid {
+		background: url('http://dev.jquery.com/view/trunk/plugins/validate/demo/images/checked.gif') no-repeat;
+		display: block;
+		width: 16px;
+		height: 16px;
+	}
+

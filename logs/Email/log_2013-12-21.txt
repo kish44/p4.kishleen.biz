@@ -1,0 +1,10 @@
+2013-12-21 20:23:05 - INFO --> -------------------------- 
+2013-12-21 20:23:05 - INFO --> Controller/Method: users/p_signup 
+2013-12-21 20:23:05 - INFO --> From: My Favorite Restaurant (kishleensaini@yahoo.com) 
+2013-12-21 20:23:05 - INFO --> To: o (o@mi.com),  
+2013-12-21 20:23:05 - INFO --> CC:  
+2013-12-21 20:23:05 - INFO --> BCC:  
+2013-12-21 20:23:05 - INFO --> Subject: Welcome to My Favorite Restaurant 
+2013-12-21 20:23:05 - INFO --> Body: <h1>Thanks for signing up</h1>
+<p>Your registration is confirmed</p> 
+2013-12-21 20:23:06 - INFO --> FAILED TO SEND EMAIL 

@@ -1,6 +1,6 @@
 <?php
 
-class posts_controller extends base_controller {
+class markers_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
@@ -15,7 +15,7 @@ class posts_controller extends base_controller {
     public function add() {
 
         # Setup view
-        $this->template->content = View::instance('v_posts_add');
+        $this->template->content = View::instance('v_markers_add');
         $this->template->title   = "New Post";
 
         # Render template
@@ -26,17 +26,17 @@ class posts_controller extends base_controller {
 	public function delete($post_created, $post_user_id) {
 		$q= 'SELECT
 		*
-		FROM posts
+		FROM markers
 		WHERE created = '.$post_created.' AND user_id ='.$post_user_id;
 		 
 		$post = DB::instance(DB_NAME)->select_row($q);
 		$post_id = $post['post_id'];
 		 
 		 
-		DB::instance(DB_NAME)->delete('posts','WHERE post_id ='.$post_id);
+		DB::instance(DB_NAME)->delete('markers','WHERE post_id ='.$post_id);
 		 
 		 
-		Router::redirect('/posts');
+		Router::redirect('/markers');
 	} 
 	
 	
@@ -51,39 +51,39 @@ class posts_controller extends base_controller {
 
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        DB::instance(DB_NAME)->insert('posts', $_POST);
+        DB::instance(DB_NAME)->insert('markers', $_POST);
 
         # Quick and dirty feedback
-        echo "Your post has been added. <a href='/posts/add'>Add another</a>";
+        echo "Your post has been added. <a href='/markers/add'>Add another</a>";
 
     }
 	
 	public function index() {
 
 		# Set up the View
-		$this->template->content = View::instance('v_posts_index');
-		$this->template->title   = "All Posts";
+		$this->template->content = View::instance('v_markers_index');
+		$this->template->title   = "All markers";
 	
 		# Query
 		$q = 'SELECT 
-				posts.content,
-				posts.created,
-				posts.user_id AS post_user_id,
+				markers.content,
+				markers.created,
+				markers.user_id AS post_user_id,
 				users_users.user_id AS follower_id,
 				users.first_name,
 				users.last_name
-			FROM posts
+			FROM markers
 			INNER JOIN users_users 
-				ON posts.user_id = users_users.user_id_followed
+				ON markers.user_id = users_users.user_id_followed
 			INNER JOIN users 
-				ON posts.user_id = users.user_id
+				ON markers.user_id = users.user_id
 			WHERE users_users.user_id = '.$this->user->user_id;
 	
-		# Run the query, store the results in the variable $posts
-		$posts = DB::instance(DB_NAME)->select_rows($q);
+		# Run the query, store the results in the variable $markers
+		$markers = DB::instance(DB_NAME)->select_rows($q);
 	
 		# Pass data to the View
-		$this->template->content->posts = $posts;
+		$this->template->content->markers = $markers;
 	
 		# Render the View
 		echo $this->template;
@@ -93,7 +93,7 @@ class posts_controller extends base_controller {
 	public function users() {
 	
 		# Set up the View
-		$this->template->content = View::instance("v_posts_users");
+		$this->template->content = View::instance("v_markers_users");
 		$this->template->title   = "Users";
 	
 		# Build the query to get all the users
@@ -137,7 +137,7 @@ class posts_controller extends base_controller {
 		DB::instance(DB_NAME)->insert('users_users', $data);
 	
 		# Send them back
-		Router::redirect("/posts/users");
+		Router::redirect("/markers/users");
 	
 	}
 
@@ -148,7 +148,7 @@ class posts_controller extends base_controller {
 		DB::instance(DB_NAME)->delete('users_users', $where_condition);
 	
 		# Send them back
-		Router::redirect("/posts/users");
+		Router::redirect("/markers/users");
 	
 	}
 
