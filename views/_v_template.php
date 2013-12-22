@@ -16,20 +16,19 @@
 
     <nav>
 
-        <menu>
+        <menu id = nav>
 
             <!-- Menu for users who are logged in -->
             <?php if($user): ?>
-    
+    			<li><a href='index.php'>Home Page</a></li>
                 <li><a href='/users/logout'>Logout</a></li>
-                <li><a href='/users/profile'>Profile</a></li>
-                <li><a href='/markers/add'>Add Post</a></li>
-                <li><a href='/markers/'>View markers</a></li>
-                <li><a href='/markers/users'>Follow users</a></li>
+                <li><a href='/markers/add'>Add Your Favorite Restaurant</a></li>
+            
+                
     
             <!-- Menu options for users who are not logged in -->
             <?php else: ?>
-    
+    			<li><a href='index.php'>Home Page</a></li>
                 <li><a href='/users/signup'>Sign up</a></li>
                 <li><a href='/users/login'>Log in</a></li>
     

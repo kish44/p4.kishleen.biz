@@ -4,9 +4,11 @@
     <h1>Find Popular Restaurants</h1>
     <h2>Are you hungry!</h2>
     <p>&nbsp;</p>
+    <div><a href='/users/login'>Log in here</a>to add your favorite restauarant</div>
   </div>
   <!--main-->
   <div class="mapWrap">
+  
     <div>
       <input type="text" id="addressInput" size="10"/>
       <select id="radiusSelect">
@@ -22,7 +24,7 @@
     </div>
     <div id="map" style="width: 100%; height: 800px"></div>
     <div class="clear"></div>
-    <div class="bottom"> Its Party Time! </div>
+    <div class="bottom"> Lets find the best meal! </div>
   </div>
   <!--mapWrap content-->
 </div>

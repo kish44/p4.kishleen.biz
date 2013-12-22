@@ -123,15 +123,7 @@ class users_controller extends base_controller {
                         // log user in using the token we generated
                         setcookie("token", $_POST['token'], strtotime('+1 year'), '/');
 
-                        // send an email a welcome message to the new user
-                        // build a multi-dimension array of recipients of this email
-                        $to[]    = Array("name" => $_POST['first_name'], "email" => $_POST['email']);
-                        $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
-                        $subject = "Welcome to Kish Blog";
-                        $body = View::instance('v_users_welcome');
-
-                        // Send email
-                        Email::send($to, $from, $subject, $body, true, '');
+                        
 
                         // signup confirm
                         Router::redirect("/users/profile");
@@ -219,30 +211,7 @@ public function p_login() {
 	
 	}
 
-/*-------------------------------------------------------------------------------------------------
-        profile page
--------------------------------------------------------------------------------------------------*/
-  public function profile($error = NULL) {
 
-                // if user is blank, they're not logged in; redirect them to the login page
-                if(!$this->user) {
-                        Router::redirect('/users/login');
-                }
-
-                // if they weren't redirected away, continue:
-
-                // setup view
-                $this->template->content = View::instance('v_users_profile');
-                $this->template->title = $this->user->first_name .' ' . $this->user->last_name. " | Profile";
-				
-
-                // pass errors, if any
-                $this->template->content->error = $error;
-
-                // render view
-                echo $this->template;
-
-        } 
         
 /*-------------------------------------------------------------------------------------------------
         unsubscribe page

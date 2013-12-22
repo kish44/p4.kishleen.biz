@@ -1,4 +1,4 @@
-<h1>Add Post</h1>
+<h1>Add Your Favorite Restaurant</h1>
 
 <form id="formID" class="formular" method="post" action="p_add" style="width:600px">
         <fieldset>
@@ -6,8 +6,7 @@
           <label>
             <input value="" class="validate[required, maxSize[100] text-input" type="text" name="venue" id="venue" />
           </label>
-          
-          
+       
           <p class="heading"> Address </p>
           <label>
             <textarea id="address" class="validate[required,funcCall[validateMap]] text-input"  name="address"></textarea>
