@@ -16,7 +16,26 @@ class markers_controller extends base_controller {
 
         # Setup view
         $this->template->content = View::instance('v_markers_add');
-        $this->template->title   = "New Post";
+        $this->template->title   = "Add Your Favorite Restaurant";
+		
+		
+		# CSS/JS includes
+			
+		# Create an array of 1 or many client files to be included in the body
+    	$client_files_head = Array(
+		"../css/validationEngine.jquery.css",						   
+        "../css/index.css",
+		"../css/template.css",
+		"../js/jqueryValidation/js/jquery-1.6.min.js",
+		"http://maps.google.com/maps/api/js?sensor=false",
+		"../js/jqueryValidation/js/languages/jquery.validationEngine-en.js",
+		"../js/jqueryValidation/js/jquery.validationEngine.js",
+		"../js/jqueryValidation/js/contrib/other-validations.js",
+		"../js/jqueryValidation/js/contrib/validation.js"
+        );
+
+		# Use load_client_files to generate the links from the above array
+		$this->template->client_files_head = Utils::load_client_files($client_files_head);  
 
         # Render template
         echo $this->template;

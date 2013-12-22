@@ -3,6 +3,18 @@
  Please reference the file AFTER the translation file or the rules will be overwritten
  Use at your own risk. We can't provide support for most of the validations
 */
+
+jQuery(document).ready(function(){
+                jQuery("#formID").validationEngine();
+				initialize();
+				
+            });
+
+
+
+
+
+
 var geocoder, map, marker;
 var defaultLatLng = new google.maps.LatLng(30,0);
   
@@ -30,6 +42,7 @@ var defaultLatLng = new google.maps.LatLng(30,0);
 
 /*initializes map*/
 function initialize() {
+	
     geocoder = new google.maps.Geocoder();
     var mapOptions = {
       zoom: 0,
@@ -43,6 +56,8 @@ function initialize() {
     marker = new google.maps.Marker();
   }
   
+   
+  
   /*validates address*/
   function validateMap() {
     clearResults();
@@ -50,16 +65,18 @@ function initialize() {
     geocoder.geocode({'address': address }, function(results, status) {
       switch(status) {
         case google.maps.GeocoderStatus.OK:
-          document.getElementById('valid').value = 'YES';
+          
           document.getElementById('type').value = results[0].types[0];
 		  if (document.getElementById('type').value != 'street_address')
 		  	{
-		  		//alert("Please provide valid address");
+		  		document.getElementById('valid').value = 'NO';
+				alert("Please provide valid address");
 		  		break;
 			}
 		  else
 		  {
-          	document.getElementById('address').value = results[0].formatted_address;
+          	document.getElementById('valid').value = 'YES';
+			document.getElementById('address').value = results[0].formatted_address;
           	mapAddress(results[0]);
 			// Get the location
 			var location = results[0].geometry.location;

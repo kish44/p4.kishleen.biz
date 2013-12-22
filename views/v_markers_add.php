@@ -1,21 +1,14 @@
 <h1>Add Post</h1>
 
-<form id="myForm" name="myForm" method='POST' action='/markers/p_add'>
-	<div>
-    <label for='content'>New Post:</label>
-    </div>
-    
-    <div>
-    <textarea name='content' id='content'></textarea><br>
-    </div>
-    
-    <div>
-    <label for="venue">
-                        Venue</label>
-                    <input id="venue" name="venue" type="text" />
-                    </div>
-                    
-                    <p class="heading"> Address </p>
+<form id="formID" class="formular" method="post" action="p_add" style="width:600px">
+        <fieldset>
+          <p class="heading"> Venue Name </p>
+          <label>
+            <input value="" class="validate[required, maxSize[100] text-input" type="text" name="venue" id="venue" />
+          </label>
+          
+          
+          <p class="heading"> Address </p>
           <label>
             <textarea id="address" class="validate[required,funcCall[validateMap]] text-input"  name="address"></textarea>
           </label>
@@ -46,11 +39,6 @@
              
             </div>
           </div>
-
-    
-    <input id="submit" type='submit' value='submit'>
-
-    
-
-
-</form> 
+        </fieldset>
+         <input type='submit' value='New post'>
+      </form>
