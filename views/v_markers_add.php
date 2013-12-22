@@ -39,5 +39,5 @@
             </div>
           </div>
         </fieldset>
-         <input type='submit' value='New post'>
+         <input type='submit' value='Add my favorite Restaurant'>
       </form>

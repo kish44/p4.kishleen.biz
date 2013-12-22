@@ -1,13 +1,18 @@
-<h1>Login</h1>
+<div class="container">
+      <h1>Login</h1>
+    </div>
+
 <form method='POST' action='/users/p_login'>
 
-    Email<br>
+    <div>
+    <p>Email</p>
     <input type='text' name='email'>    
-    <br><br>
+    </div>
 
-    Password<br>
+    <div>
+    <p>Password</p>
     <input type='password' name='password'>
-    <br><br>
+    </div>
 
     <?php if(isset($error)): ?>
         <div class='error'>

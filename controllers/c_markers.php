@@ -24,8 +24,7 @@ user) {
 			
 		# Create an array of 1 or many client files to be included in the body
     	$client_files_head = Array(
-		"../css/validationEngine.jquery.css",						   
-        "../css/index.css",
+		"../css/validationEngine.jquery.css",
 		"../css/template.css",
 		"../js/jqueryValidation/js/jquery-1.6.min.js",
 		"http://maps.google.com/maps/api/js?sensor=false",
