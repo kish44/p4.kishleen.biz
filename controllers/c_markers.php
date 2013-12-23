@@ -23,19 +23,15 @@ user) {
 		# CSS/JS includes
 			
 		# Create an array of 1 or many client files to be included in the body
-    	$client_files_head = Array(
-		"../css/validationEngine.jquery.css",
-		"../css/template.css",
-		"../js/jqueryValidation/js/jquery-1.6.min.js",
-		"http://maps.google.com/maps/api/js?sensor=false",
-		"../js/jqueryValidation/js/languages/jquery.validationEngine-en.js",
-		"../js/jqueryValidation/js/jquery.validationEngine.js",
-		"../js/jqueryValidation/js/contrib/other-validations.js",
-		"../js/jqueryValidation/js/contrib/validation.js"
+    	$client_files_body = Array(
+		"../js/posabsolute-jQuery-Validation-Engine-499f567/js/jquery-1.8.2.min.js",
+		"http://maps.google.com/maps/api/js?sensor=false",			"../js/posabsolute-jQuery-Validation-Engine-499f567/js/languages/jquery.validationEngine-en.js",
+		"../js/posabsolute-jQuery-Validation-Engine-499f567/js/jquery.validationEngine.js",
+		"../js/posabsolute-jQuery-Validation-Engine-499f567/js/contrib/other-validations.js"
         );
 
 		# Use load_client_files to generate the links from the above array
-		$this->template->client_files_head = Utils::load_client_files($client_files_head);  
+		$this->template->client_files_body = Utils::load_client_files($client_files_body);  
 
         # Render template
         echo $this->template;

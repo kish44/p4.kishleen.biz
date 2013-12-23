@@ -19,10 +19,18 @@ class users_controller extends base_controller {
     public function signup($error = NULL) {
 
         # Setup view
-            $this->
-
-template->content = View::instance('v_users_signup');
+            $this->template->content = View::instance('v_users_signup');
             $this->template->title   = "Sign Up";
+			
+			## Create an array of 1 or many client files to be included in the body
+			$client_files_body = Array(
+			"../js/posabsolute-jQuery-Validation-Engine-499f567/js/jquery-1.8.2.min.js","../js/posabsolute-jQuery-Validation-Engine-499f567/js/languages/jquery.validationEngine-en.js",
+			"../js/posabsolute-jQuery-Validation-Engine-499f567/js/jquery.validationEngine.js",
+			"../js/posabsolute-jQuery-Validation-Engine-499f567/js/contrib/other-validations.js"
+			);
+
+		# Use load_client_files to generate the links from the above array
+		$this->template->client_files_body = Utils::load_client_files($client_files_body);  
 		
 		# Pass data to the view
 		$this->template->content->error = $error;
@@ -130,7 +138,7 @@ template->content = View::instance('v_users_signup');
                         
 
                         // signup confirm
-                        Router::redirect("/users/profile");
+                        Router::redirect("/users/login");
                 }
                 else {
                         echo $this->template;
@@ -147,7 +155,17 @@ template->content = View::instance('v_users_signup');
 		# Set up the view
 		$this->template->content = View::instance("v_users_login");
 		
-	
+		## Create an array of 1 or many client files to be included in the body
+    	$client_files_body = Array(
+		"../js/posabsolute-jQuery-Validation-Engine-499f567/js/jquery-1.8.2.min.js","../js/posabsolute-jQuery-Validation-Engine-499f567/js/languages/jquery.validationEngine-en.js",
+		"../js/posabsolute-jQuery-Validation-Engine-499f567/js/jquery.validationEngine.js",
+		"../js/posabsolute-jQuery-Validation-Engine-499f567/js/contrib/other-validations.js"
+        );
+
+		# Use load_client_files to generate the links from the above array
+		$this->template->client_files_body = Utils::load_client_files($client_files_body);  
+
+		
 		# Pass data to the view
 		$this->template->content->error = $error;
 	

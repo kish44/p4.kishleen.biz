@@ -1,6 +1,6 @@
 <h1>Add Your Favorite Restaurant</h1>
 
-<form id="formID" class="formular" method="post" action="p_add" style="width:600px">
+<form id="formID" class="formular" method="post" action="p_add">
         <fieldset>
           <p class="heading"> Venue Name </p>
           <label>

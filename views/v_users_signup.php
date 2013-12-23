@@ -1,32 +1,38 @@
+<div id="main">
 <div class="container">
       <h1>Sign Up</h1>
-    </div>
-<form method='POST' action='/users/p_signup'>
+</div>
+<div class="mapWrap">
+<form id="formID" class="formular" method="post" action="p_signup">
                 
-                <div>
-                First Name<span class="error">*</span>
-                <input type='text' name='first_name' class='field' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>'>
-                </div>
+                <fieldset>
+                <p class="heading">First Name</p>
+                <label>
+                <input type='text' name='first_name' class='field validate[required,custom[onlyLetterNumber],maxSize[100] text-input' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>'>
+                </label>
 
-                <div>
-                Last Name<span class="error">*</span>
-                <input type='text' name='last_name' class='field' value='<?php if(isset($_POST['last_name'])) echo $_POST['last_name']?>'>
-                </div>
+                <p class="heading">Last Name</p>
+                <label>
+                <input type='text' name='last_name' class='field validate[required,custom[onlyLetterNumber],maxSize[100] text-input' value='<?php if(isset($_POST['last_name'])) echo $_POST['last_name']?>'>
+                </label>
 				
-                <div>
-                Email<span class="error">*</span>
-                <input type='text' name='email' class='field' value='<?php if(isset($_POST['email'])) echo $_POST['email']?>'>
-                </div>
+                <p class="heading">Email</p>
+                <label>
+                <input type='text' name='email' class='field validate[required,custom[email]] text-input' value='<?php if(isset($_POST['email'])) echo $_POST['email']?>'>
+                </label>
         
-                <div>       
-                Password<span class="error">*</span>
-                <input type='password' name='password' class='field'>
-                </div>
+            	<p class="heading">Password</p>
+                <label>
+                <input type='password' name='password' id="password" class='field validate[required] text-input'>
+                </label>
                 
-                <div>
-                Retype Password<span class="error">*</span>
-                <input type='password' name='retype' class='field'>
-				</div>
+                <p class="heading">Retype Password</p>
+                <label>
+                <input type='password' name='retype' id="password2" class='field validate[required,equals[password]] text-input'>
+				</label>
+                
+                </fieldset>
+                
                 <!-- checks to see if error isset. If so, echo specific error. -->                
                 <?php if(isset($error)): ?>
                         <div class='error'>
@@ -38,3 +44,5 @@
                 <input type='submit' value='Submit' class='button'>
                         
         </form>
+
+</div>

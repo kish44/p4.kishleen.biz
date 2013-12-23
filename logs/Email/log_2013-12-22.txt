@@ -1,0 +1,14 @@
+2013-12-22 18:23:37 - INFO --> -------------------------- 
+2013-12-22 18:23:37 - INFO --> Controller/Method: index/index 
+2013-12-22 18:23:37 - INFO --> From: My Favorite Restaurant (kishleensaini@yahoo.com) 
+2013-12-22 18:23:37 - INFO --> To: My Favorite Restaurant (kishleensaini@gmail.com),  
+2013-12-22 18:23:37 - INFO --> CC:  
+2013-12-22 18:23:37 - INFO --> BCC:  
+2013-12-22 18:23:37 - INFO --> Subject: My Favorite Restaurant SQL Error 
+2013-12-22 18:23:37 - INFO --> Body: <h2>SQL Error</h2>Access denied for user 'kishleen_p4'@'localhost' (using password: YES)<h2>Query History</h2><h2>Routed Controller/Method:</h2> index/index<br/><h2>Cookies</h2><pre>Array
+(
+    [PHPSESSID] => lbrklolp87jtj2a2f3vu51ffc7
+    [token] => 6554e8aef35dc4e522672f9cacba11b16c62bbf1
+)
+</pre> 
+2013-12-22 18:23:38 - INFO --> FAILED TO SEND EMAIL 
